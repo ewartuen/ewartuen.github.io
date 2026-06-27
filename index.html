@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 預設 Meta 標籤 (繁體中文) -->
     <title id="meta-title">ewartuen | 個人項目與實用工具空間</title>
-    <meta id="meta-desc" name="description" content="歡迎來到 ewartuen 的個人網頁空間。這裡主要存放我為社區街坊、日常應用及興趣開發的網頁工具與獨立項目，包括映灣園住戶專車班次倒數、德國橋牌計分板及中國象棋。">
+    <meta id="meta-desc" name="description" content="歡迎來到 ewartuen 的個人網頁空間。這裡主要存放我為社區街坊、日常應用及興趣開發的網頁工具與獨立項目，包括映灣園住戶專車班次倒數、德國橋牌計分板、中國象棋及國際象棋。">
     
     <style>
         :root {
@@ -129,6 +129,22 @@
             text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
             font-family: "Kaiti", "DFKai-SB", "楷體", serif;
         }
+
+        /* 國際象棋立體雙色 Icon */
+        .w-chess-icon {
+            width: 36px;
+            height: 36px;
+            background: #eebd7b;
+            border: 2px solid #6b4c2b;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #ffffff;
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.25));
+            text-shadow: 1px 1px 2px #000;
+        }
         
         .project-title {
             font-size: 18px;
@@ -204,6 +220,14 @@
                 <div class="project-desc" id="p3-desc">網頁版獨立中國象棋棋盤應用。支援連線對戰。無論是棋藝切磋還是日常消遣，都能在瀏覽器中獲得流暢的對弈體驗。</div>
                 <div class="go-link" id="p3-go">開始對弈 →</div>
             </a>
+
+            <!-- 新增項目：國際象棋 Chess -->
+            <a href="https://ewartuen.github.io/chess/" class="project-card">
+                <div class="project-icon"><span class="w-chess-icon">♔</span></div>
+                <div class="project-title" id="p4-title">國際象棋連線版 (Chess Online)</div>
+                <div class="project-desc" id="p4-desc">網頁版雙人跨裝置即時連線國際象棋對戰平台。具備合法走法高亮提示與落子完美音效對齊，隨開隨玩，與全球棋友一決勝負。</div>
+                <div class="go-link" id="p4-go">Play Now / 開始對弈 →</div>
+            </a>
         </main>
     </div>
 
@@ -211,7 +235,8 @@
         <div class="footer-links">
             <a href="https://ewartuen.github.io/cc-bus/" id="f-link1">映灣園住戶專車班次</a> | 
             <a href="https://ewartuen.github.io/german-bridge/" id="f-link2">German Bridge Scoreboard</a> |
-            <a href="https://ewartuen.github.io/chinese-chess/" id="f-link3">中國象棋</a>
+            <a href="https://ewartuen.github.io/chinese-chess/" id="f-link3">中國象棋</a> |
+            <a href="https://ewartuen.github.io/chess/" id="f-link4">國際象棋連線版</a>
         </div>
         <p style="margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;" id="footer-disclaimer">
             <strong>免責聲明與隱私政策：</strong> 本站為個人自發製作之項目展示空間。各子項目所提供之數據及遊戲內容僅供參考。本站絕對尊重用戶隱私，主頁面本身不收集任何個人識別資料。站內廣告由第三方廣告平台（如 Google AdSense）提供，其可能會使用 Cookie 以提供相關廣告。
@@ -223,7 +248,7 @@
         const translations = {
             'zh-HK': {
                 metaTitle: 'ewartuen | 個人項目與實用工具空間',
-                metaDesc: '歡迎來到 ewartuen 的個人網頁空間。這裡主要存放我為社區街坊、日常應用及興趣開發的網頁工具與獨立項目，包括映灣園住戶專車班次倒數、德國橋牌計分板及中國象棋。',
+                metaDesc: '歡迎來到 ewartuen 的個人網頁空間。這裡主要存放我為社區街坊、日常應用及興趣開發的網頁工具與獨立項目，包括映灣園住戶專車班次倒數、德國橋牌計分板、中國象棋及國際象棋。',
                 headerTitle: "ewartuen's Space",
                 headerDesc: '歡迎來到我的個人網頁空間。這裡主要存放我為社區街坊、日常應用及興趣開發的網頁工具與獨立項目。',
                 p1Title: '映灣園住戶專車班次',
@@ -235,12 +260,15 @@
                 p3Title: '中國象棋 Chinese Chess',
                 p3Desc: '網頁版獨立中國象棋棋盤應用。支援連線對戰。無論是棋藝切磋還是日常消遣，都能在瀏覽器中獲得流暢的對弈體驗。',
                 p3Go: '開始對弈 →',
+                p4Title: '國際象棋連線版 (Chess Online)',
+                p4Desc: '網頁版雙人跨裝置即時連線國際象棋對戰平台。具備合法走法高亮提示與落子完美音效對齊，隨開隨玩，與全球棋友一決勝負。',
+                p4Go: '開始對弈 →',
                 chessPiece: '帥',
                 footerDisclaimer: '<strong>免責聲明與隱私政策：</strong> 本站為個人自發製作之項目展示空間。各子項目所提供之數據及遊戲內容僅供參考。本站絕對尊重用戶隱私，主頁面本身不收集任何個人識別資料。站內廣告由第三方廣告平台（如 Google AdSense）提供，其可能會使用 Cookie 以提供相關廣告。'
             },
             'zh-CN': {
                 metaTitle: 'ewartuen | 个人项目与实用工具空间',
-                metaDesc: '欢迎来到 ewartuen 的个人网页空间。这里主要存放我为社区邻里、日常应用及兴趣开发的网页工具与独立项目，包括映湾园住户专车班次倒数、德国桥牌计分板及中国象棋。',
+                metaDesc: '欢迎来到 ewartuen 的个人网页空间。这里主要存放我为社区邻里、日常应用及兴趣开发的网页工具与独立项目，包括映湾园住户专车班次倒数、德国桥牌计分板、中国象棋及国际象棋。',
                 headerTitle: "ewartuen's Space",
                 headerDesc: '欢迎来到我的个人网页空间。这里主要存放我为社区邻里、日常应用及兴趣开发的网页工具与独立项目。',
                 p1Title: '映湾园住户专车班次',
@@ -252,12 +280,15 @@
                 p3Title: '中国象棋 Chinese Chess',
                 p3Desc: '网页版独立中国象棋棋盘应用。支持连线对战。无论是棋艺切磋还是日常消遣，都能在浏览器中获得流畅的对弈体验。',
                 p3Go: '开始对弈 →',
+                p4Title: '国际象棋连线版 (Chess Online)',
+                p4Desc: '网页版双人跨设备即时连线国际象棋对战平台。具备合法走法高亮提示与落子完美音效对齐，随开随玩，与全球棋友一决高下。',
+                p4Go: '开始对弈 →',
                 chessPiece: '帅',
                 footerDisclaimer: '<strong>免责声明与隐私政策：</strong> 本站为个人自发制作之项目展示空间。各子项目所提供的数据及游戏内容仅供参考。本站绝对尊重用户隐私，本页面本身不收集任何个人识别资料。站内广告由第三方广告平台（如 Google AdSense）提供，其可能会使用 Cookie 以提供相关广告。'
             },
             'en': {
-                metaTitle: "ewartuen | Personal Projects & Tools Hub",
-                metaDesc: "Welcome to ewartuen's personal space. Explore web tools and projects built for the community and entertainment, including Caribbean Coast shuttle bus countdown, German Bridge scoreboard, and Chinese Chess.",
+                metaTitle: "Play Chess Online | Real-time Multiplayer Chess Web App (雙人線上國際象棋)",
+                metaDesc: "Play chess online instantly in your browser. Features real-time remote matchmaking via MQTT, synchronized move sound effects, and legal move highlighting. No download required—perfect for challenging players worldwide.",
                 headerTitle: "ewartuen's Space",
                 headerDesc: "Welcome to my personal web space. This hub hosts custom web utilities, tools, and indie projects developed for community convenience and leisure.",
                 p1Title: "Caribbean Coast Shuttle Bus Timetable",
@@ -269,6 +300,9 @@
                 p3Title: "Chinese Chess (象棋)",
                 p3Desc: "A standalone web-based Chinese Chess application supporting online multiplayer matchmaking. Enjoy smooth matches for casual gaming or tactical analysis directly in your browser.",
                 p3Go: "Play Now →",
+                p4Title: "Multiplayer Chess Online",
+                p4Desc: "Experience instant browser-based chess with real-time matchmaking via MQTT, smart move hints, and synchronized audio. Play smoothly with global players anytime.",
+                p4Go: "Play Now →",
                 chessPiece: '帥',
                 footerDisclaimer: "<strong>Disclaimer & Privacy Policy:</strong> This website is a personal portfolio hub. Data and content provided in sub-projects are for informational and recreational purposes only. We highly respect user privacy; this main hub does not collect any personally identifiable information. Ads displayed are powered by third-party networks (e.g., Google AdSense), which may use cookies to deliver tailored content."
             }
@@ -287,19 +321,26 @@
             document.getElementById('p3-title').innerText = translations[lang].p3Title;
             document.getElementById('p3-desc').innerText = translations[lang].p3Desc;
             document.getElementById('p3-go').innerText = translations[lang].p3Go;
+            
+            // 更新新加入的國際象棋欄位
+            document.getElementById('p4-title').innerText = translations[lang].p4Title;
+            document.getElementById('p4-desc').innerText = translations[lang].p4Desc;
+            document.getElementById('p4-go').innerText = translations[lang].p4Go;
+            
             document.getElementById('chess-piece').innerText = translations[lang].chessPiece;
             document.getElementById('footer-disclaimer').innerHTML = translations[lang].footerDisclaimer;
             
             document.getElementById('f-link1').innerText = translations[lang].p1Title;
             document.getElementById('f-link2').innerText = translations[lang].p2Title;
             document.getElementById('f-link3').innerText = translations[lang].p3Title;
+            document.getElementById('f-link4').innerText = translations[lang].p4Title;
 
             // 2. 動態更新 SEO Meta 標籤
             document.title = translations[lang].metaTitle;
             document.getElementById('meta-desc').setAttribute('content', translations[lang].metaDesc);
             document.documentElement.setAttribute('lang', lang);
 
-            // 3. 切換按鈕的高亮狀態 (修正不依賴 event 的穩定寫法)
+            // 3. 切換按鈕的高亮狀態
             const buttons = document.querySelectorAll('.lang-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             
