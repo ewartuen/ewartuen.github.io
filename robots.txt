@@ -1,0 +1,6 @@
+# Allow all web crawlers to access all files
+User-agent: *
+Allow: /
+
+# Direct crawlers to your XML sitemap
+Sitemap: https://ewartuen.github.io/sitemap.xml
